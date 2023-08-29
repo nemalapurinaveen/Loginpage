@@ -1,0 +1,130 @@
+!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIGN UP</title>
+
+    <style>
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: black;
+            }
+
+            li {
+            float: left;
+            border-right: 2px solid blacksmoke;
+            }
+
+            li a {
+              display: block;
+              color: white;
+              text-align: center;
+              padding: 14px 16px;
+              text-decoration: none;
+            }
+
+            li a:hover {
+            background-color: #111;
+            }
+            .active{
+              background-color:  #04AA6D;
+            } 
+            body{
+              background-color: #E0E0E0;
+            }
+            .col{
+              color: antiquewhite;
+            }
+    </style>
+</head>
+<body>
+  <ul>
+    <li><a class="active" href="file:///C:/Users/Pradeep/Desktop/web%20technologies/MOVIE%20TICKET.HTML#home">Home</a></li>
+    <li><a href="#news">Payment status</a></li>
+    <li><a href="#contact">about us</a></li>
+    <li><a href="#contact">about us</a></li>
+    <li style="float:right"><a href="file:///C:/Users/Pradeep/Desktop/web%20technologies/login%20file.html">login</a></li>
+    <li style="float:right" ><a href="file:///C:/Users/Pradeep/Desktop/web%20technologies/SIGN%20UP.HTML">Register</a></li>
+  </ul>
+    <div class="container">
+      <center><h1 style="background-color: black;" class="col">Register now</h1></center>
+      <hr>
+      <center>
+      <form name="form"  onsubmit="return validateForm()">
+      <label for="first-name"><b>First Name:</b></label><br>
+      <input type="text" id="name" placeholder="First-Name" name="firstname"><br><br>
+      <label for="Last name"><b>Last Name:</b></label><br>
+      <input type="text" id="name"placeholder="Last-Name" name="lastname"><br><br>
+      <label for="email"><b>Email:</b></label><br>
+      <input type="email" id="email" placeholder="Enter Email" name="email"><br><br>
+
+      <label for="psw"><b>Password:</b></label><br>
+      <input type="password" id="psw"placeholder="Enter Password" name="psw"><br><br>
+
+      <label for="psw-repeat"><b>Repeat Password:</b></label><br>
+      <input type="password" id="psw-repeat"placeholder="Repeat Password" name="psw-repeat"><br><br>
+      <b>Mark Your Age Down:</b> <br><br>
+        <input type="checkbox" name="" id="">6-18 <br>
+        <input type="checkbox" name="" id="">18-24 <br>
+        <input type="checkbox" name="" id="">24-65 <br><br>
+
+      <label>
+        <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+      </label>
+
+      <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+
+      <div class="clearfix">
+        <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+        <button type="submit" class="signup">Sign Up</button>
+      </div>
+      </form>
+      </center>
+    </div>
+</div>
+<script>
+  function validateForm() {
+    var firstname = document.forms['form']['firstname'].value;
+    var lastname = document.forms['form']['lastname'].value;
+    var mail = document.forms['form']['email'].value;
+    var p = document.forms['form']['psw'].value;
+    var rep = document.forms['form']['psw-repeat'].value;
+    if (firstname==""){
+      alert("Please Don't leave blank");
+      return false;
+    }
+    else if (lastname==""){
+      alert("Please Don't leave blank");
+      return false;
+    }
+    else if (email==""){
+      alert("Please Don't leave blank");
+      return false;
+    }
+   
+    else if(p==""){
+      alert("plaese enter the password");
+      return false;
+    }
+    else if(p.length<8){
+      alert("password must be atleast 8 characters");
+      return false;
+    }
+    else if(rep==""){
+      alert("plaese repeat the password");
+      return false;
+    }
+    else if(rep!=p){
+      alert("Both the passwords are not same");
+      return false;
+    }
+    return true;
+  }
+</script>
+</body>
+</html>

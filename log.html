@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOGIN PAGE</title>
+    <script>
+      function validateForm() {
+        let x = document.forms["myForm"]["email"].value;
+        let y = document.forms["myForm"]["psw"].value;
+        if (x == "") {
+          alert("Name must be filled out");
+          return false;
+        }
+        else if(y==""){
+          alert("password must be filled out");
+          return false;
+        }
+      }
+    </script>
+    <style>
+      body{
+        background-color: #E0E0E0;
+      }
+      h1{
+        color: black;
+      }
+      h3{
+        color: black;
+      }
+      label{
+        color: black;
+      }
+      ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: black;
+            }
+
+            li {
+            float: left;
+            border-right: 2px solid whitesmoke;
+            }
+
+            li a {
+              display: block;
+              color: white;
+              text-align: center;
+              padding: 14px 16px;
+              text-decoration: none;
+            }
+
+            li a:hover {
+            background-color: #111;
+            }
+            .active{
+              background-color:  #04AA6D;
+            } 
+    </style>
+</head>
+<body>
+  <ul>
+    <li><a class="active" href="file:///C:/Users/Pradeep/Desktop/web%20technologies/MOVIE%20TICKET.HTML#home">Home</a></li>
+    <li><a href="#news">Payment status</a></li>
+    <li><a href="#contact">about us</a></li>
+    <li><a href="#contact">about us</a></li>
+    <li style="float:right"><a href="file:///C:/Users/Pradeep/Desktop/web%20technologies/login%20file.html">login</a></li>
+    <li style="float:right" ><a href="file:///C:/Users/Pradeep/Desktop/web%20technologies/SIGN%20UP.HTML">Register</a></li>
+  </ul>
+  
+   
+        <div class="container">
+          <center><h1>MOVIE TICKETS</h1>
+          <h3>LOG IN</h3>
+          <p style="color: black;">LOG INTO YOUR ACCOUNT</p>
+          <form name="myForm" action="/action_page.php" onsubmit="return validateForm()" method="post">
+          <label for="email"><b>Email</b></label>
+          <input type="text" placeholder="Enter Email" name="email"><br><br>
+      
+          <label for="psw"><b>Password</b></label>
+          <input type="password" placeholder="Enter Password" name="psw"><br>
+          <label>
+            <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+          </label>
+          <div class="clearfix">
+            <button type="button" class="cancelbtn">Cancel</button>
+            <button type="submit" class="loginbtn"><a href="file:///C:/Users/Pradeep/Desktop/web%20technologies/MOVIE%20TICKET.HTML"target="_blank">LOG IN</a></button>
+          </div>
+        </div>
+      </form>
+    </center>
+    <center>
+    <img src="2.jpg" alt="jai lava kusha" height="350" width="250">
+    <img src="1.jpg" alt="damaka" height="350" width="250">
+    <img src="rrrhd.jpg" alt="rrr" height="350" width="250">
+    </center>
+    
+</body>
+</html>
